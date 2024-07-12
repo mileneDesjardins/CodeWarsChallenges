@@ -32,7 +32,6 @@ const nomDeLaFonction = () => {
 const add = (a, b) => a + b;
 Cela est équivalent à :
 
-
 const add = (a, b) => {
   return a + b;
 };
