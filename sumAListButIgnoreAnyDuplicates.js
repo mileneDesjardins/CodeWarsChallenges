@@ -69,3 +69,49 @@ function sumNoDuplicates(arr) {
   });
   return sum;
 }
+
+// Explication Étape par Étape :
+// Initialisation des Variables :
+
+// uniqueArr est un tableau vide destiné à stocker les éléments uniques de arr.
+// sum est une variable initialisée à 0 qui servira à calculer la somme des éléments uniques.
+// Boucle forEach :
+
+// arr.forEach((num) => { ... }) itère sur chaque élément num du tableau arr.
+// Condition if :
+
+// if (arr.indexOf(num) === arr.lastIndexOf(num)) vérifie si l'index de la première occurrence de num (arr.indexOf(num)) est égal à l'index de sa dernière occurrence (arr.lastIndexOf(num)).
+// Cela signifie que num apparaît une seule fois dans le tableau arr.
+// Ajout à uniqueArr et Calcul de sum :
+
+// Si la condition if est vraie (c'est-à-dire que num est unique), num est ajouté à uniqueArr avec uniqueArr.push(num) et sa valeur est ajoutée à sum avec sum += num.
+// Retour de la Somme :
+
+// À la fin de la boucle forEach, la fonction retourne sum, qui contient la somme des éléments uniques de arr.
+
+// Tableau d'origine : [3, 1, 2, 3, 4, 1, 5]
+
+// Indices:    0  1  2  3  4  5  6
+// Éléments:   3  1  2  3  4  1  5
+
+// Explication de la condition :
+// arr.indexOf(num) : Cette fonction renvoie l'index de la première occurrence de num dans le tableau arr.
+// arr.lastIndexOf(num) : Cette fonction renvoie l'index de la dernière occurrence de num dans le tableau arr.
+// Illustration :
+// Pour num = 3 :
+
+// arr.indexOf(3) retourne 0.
+// arr.lastIndexOf(3) retourne 3.
+// Donc, 0 === 3 est faux, car 3 apparaît plus d'une fois dans le tableau.
+// Pour num = 1 :
+
+// arr.indexOf(1) retourne 1.
+// arr.lastIndexOf(1) retourne 5.
+// Donc, 1 === 5 est faux, car 1 apparaît plus d'une fois dans le tableau.
+// Pour num = 2 :
+
+// arr.indexOf(2) retourne 2.
+// arr.lastIndexOf(2) retourne 2.
+// Donc, 2 === 2 est vrai, car 2 apparaît exactement une fois dans le tableau.
+// Conclusion :
+// La condition if (arr.indexOf(num) === arr.lastIndexOf(num)) est utilisée pour vérifier si un élément num dans le tableau arr est unique, c'est-à-dire s'il n'apparaît qu'une seule fois à la fois au début et à la fin du tableau.
